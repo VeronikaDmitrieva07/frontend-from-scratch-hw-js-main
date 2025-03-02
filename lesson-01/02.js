@@ -6,4 +6,11 @@
 */
 
 // your code
-let factorial
+let factorial = 1;
+let initNumber = 1;
+let lastNumber = 10;
+while (initNumber <= lastNumber) {
+factorial = factorial * initNumber
+ initNumber += 1
+}
+console.log(factorial);
