@@ -17,12 +17,13 @@
 Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-function findCommonElements(arr1, arr2) {
-newArr = [];
-
-for (i = 0; i < arr1.length; i++)
-    if (arr2.includes(arr1[i])){
-        newArr.push(arr1[i]);
-      }
-      return newArr;
+function findUniqueElements(arr) {
+  let newElem = [];
+  for (let i = 0; i < arr.length; i++) {
+    
+  if (!newElem .includes(arr[i])) {
+    newElem.push(arr[i]);
+  }
+  }
+  return newElem;
 }
