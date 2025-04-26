@@ -52,7 +52,7 @@ for (let i = 0; i < PETS.length; i++) {
 function updateCartDisplay() {
   cartList.innerHTML = ''
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < cart.length; i++) {
     const petId = cart[i]
     const pet = PETS.find((item) => item.id === petId)
     const petSpanElement = document.createElement('li')
@@ -69,12 +69,13 @@ clearCartButton.addEventListener('click', function () {
 
 // Твой код:
 petShop.onclick = function (event) {
-  let idPet = event.target.id;
-  cart.push(idPet)
-  updateCartDisplay()
-
-  if (cart.length > 2) {
-    messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
-    cartList.append(messageBox)
+  let idPet = event.target.id
+  if (cart.length < 3){
+  cart.push(idPet) 
+  updateCartDisplay() 
   }
-};
+  if (cart.length >= 3){
+  messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
+ cartList.append(messageBox)
+  }
+}
