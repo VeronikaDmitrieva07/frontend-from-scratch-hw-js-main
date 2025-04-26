@@ -73,9 +73,9 @@ petShop.onclick = function (event) {
   if (cart.length < 3){
   cart.push(idPet) 
   updateCartDisplay() 
+  PETS.delete(id)
   }
   if (cart.length >= 3){
   messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
- cartList.append(messageBox)
   }
 }
