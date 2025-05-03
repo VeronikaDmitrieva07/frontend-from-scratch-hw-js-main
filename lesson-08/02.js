@@ -40,17 +40,17 @@ startButton.addEventListener('click', () => {
 
   timerId = setInterval(function () {
     if (counter === 0) {
-      clearInterval(timerId);
       counter = "🚀"
+      clearInterval(timerId);
       isTimerStarted = false
-    } else (counter >= 0)
+    }
     countdownDisplay.innerHTML = counter
     counter--;
   }, 1000);
 })
 
 cancelButton.addEventListener('click', () => {
-  if (isTimerStarted === true) {
+  if (isTimerStarted) {
     clearInterval(timerId)
     countdownDisplay.textContent = "Отменено"
   }
